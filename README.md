@@ -27,3 +27,9 @@ API_BASE_URL=<https://reqres.in/api>
 ## environment variable VITE exposure
 
 <https://vitejs.dev/guide/env-and-mode.html>
+
+## instructions on how to test this after spinning this up locally
+
+You will be presented with a page with an input in the middle. This is an automcomplete input so you may begin by typing any letter and this will try and search for a matching user.
+
+**Bear in mind the dataset here is limited to the API and it's only a handful of users returned.**
