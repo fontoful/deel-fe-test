@@ -4,6 +4,8 @@ import { User } from "../types/global";
 
 export const getUsers = async (query: { name?: string }) => {
   const queryParams = filterKeys(query);
+  // this is hard-coded but in a real world-app this would also come in the query object
+  const per_page = 10;
 
   /*
     in an ideal world with an endpoint that accepts query params, I'd call it passing the name query and it'd return me the filtered array.
@@ -12,7 +14,7 @@ export const getUsers = async (query: { name?: string }) => {
     I will simply filter out from my users endpoint using a Regex
   */
 
-  const res = await fetch(`${API_BASE_URL}/users`)
+  const res = await fetch(`${API_BASE_URL}/users?per_page=${per_page}`)
   const data = await res.json()
   const users = data.data as User[]
 
